@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2f289cfe-db47-408c-a015-9bc435b60e87" name="192.168.237.128">
+        <fileTransfer rootFolder="/opt/nodejscode/d4-app" accessType="SFTP" host="192.168.237.128" port="22" sshConfigId="1d9e2f6b-ead5-48d1-92a1-45fc10d39456" sshConfig="root@192.168.237.128:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
