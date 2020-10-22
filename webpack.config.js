@@ -8,7 +8,7 @@ const webpack=require('webpack')
 
 
 module.exports = {
-entry: './entry.js',
+entry: './app/index.ts',
 
 
     output: {
@@ -18,7 +18,14 @@ entry: './entry.js',
 
     devServer: {
         contentBase: distDir,
-        port: 60800
+        port: 60800,
+        proxy:{
+            "/api": "http://localhost:60900",
+            "/es":{
+                target: "http://192.168.237.128:9200",
+                pathRewrite: {"^/es":""}
+            }
+        }
     },
 
 
@@ -35,6 +42,9 @@ entry: './entry.js',
 
     module: {
         rules: [
+            {   test: /\.ts$/,
+                loader: "ts-loader"
+            },
             {
                 test: /\.css$/,
                 use: ["style-loader","css-loader"]
